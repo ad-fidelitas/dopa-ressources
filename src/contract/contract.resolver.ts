@@ -3,8 +3,8 @@ import { Contract } from '../Contract';
 import { Int } from 'type-graphql';
 import { ContractService } from './Contract.service';
 
-@Resolver('CowuutractResolver')
-export class ContractResolverResolver {
+@Resolver('Contract')
+export class ContractResolver {
     constructor(
         private readonly contractService: ContractService,
     ) {}
