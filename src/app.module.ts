@@ -9,7 +9,7 @@ import { ContractService } from './contract-resolver/Contract.service';
   imports: [
     GraphQLModule.forRoot({
     debug: false,
-    autoSchemaFile: 'schema.gql',
+    autoSchemaFile: 'graph-ql/schema.gql',
   }),
 ],
   controllers: [AppController],
