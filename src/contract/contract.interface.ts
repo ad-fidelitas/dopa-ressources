@@ -1,4 +1,4 @@
-export interface Contract {
+export interface IContract {
     participant: string;
     supervisor: string;
 
