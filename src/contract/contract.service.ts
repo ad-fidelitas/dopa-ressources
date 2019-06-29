@@ -1,7 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { DatabaseSymbols } from 'src/constants/DatabaseSymbols';
 import { ContractModel} from './model/contract.resource';
-import { CreateContractDto } from './dtos/ingredient.dto';
 import { IContract } from './contract.interface';
 
 @Injectable()
@@ -11,7 +10,7 @@ export class ContractService {
         @Inject(DatabaseSymbols.ContractModel) private readonly contractModel: ContractModel,
     ) {}
 
-    async create(createIngredientDto: CreateContractDto): Promise<IContract> {
+    async create(createIngredientDto: IContract): Promise<IContract> {
         return await this.contractModel.create(createIngredientDto);
     }
 
@@ -23,7 +22,7 @@ export class ContractService {
         return this.contractModel.findByIdAndDelete(id).exec();
     }
 
-    async update(id: string, createIngredientDto: CreateContractDto): Promise<IContract> {
+    async update(id: string, createIngredientDto: IContract): Promise<IContract> {
         return this.contractModel.update(id, createIngredientDto).exec();
     }
 }

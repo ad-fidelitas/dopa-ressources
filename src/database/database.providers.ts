@@ -6,6 +6,6 @@ export const databaseProviders: Provider[] = [
     {
         provide: DatabaseSymbols.Connection,
         useFactory: async (): Promise<typeof mongoose> =>
-            await mongoose.connect('mongodb://localhost/bar_app'),
+            await mongoose.connect('mongodb://localhost/dopa'),
     },
 ];

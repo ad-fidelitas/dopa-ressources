@@ -1,0 +1,2 @@
+- [ ] Check how I can add a transformation pipe to graphql input types so that I can give a dummy _id when the receiving id is undefined. (Uncreated id for those, I can have the constant be exported and used in different parts of the application)
+- [ ] Else look into

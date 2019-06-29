@@ -4,6 +4,9 @@ import { IContract } from '../contract.interface';
 export class CreateContractDto implements IContract {
 
     @IsString()
+    readonly _id: string;
+
+    @IsString()
     readonly participant: string;
 
     @IsString()

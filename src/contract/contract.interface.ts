@@ -1,4 +1,6 @@
-export interface IContract {
+import { IRessource } from 'src/interfaces/IRessource';
+
+export interface IContract extends IRessource {
     participant: string;
     supervisor: string;
 
