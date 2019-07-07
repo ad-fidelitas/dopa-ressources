@@ -1,7 +1,7 @@
-import { prop, pre, Typegoose } from 'typegoose';
 import { Document, Model } from 'mongoose';
-import { IContract } from '../contract.interface';
-import { IdGen } from '../../database/IdGen';
+import { IContract } from 'src/interfaces/contract.interface'; // TODO
+import { pre, prop, Typegoose } from 'typegoose';
+import { IdGen } from '../database/IdGen';
 
 @pre<Contract>('save', function(next) {
     if (this._id === undefined) {

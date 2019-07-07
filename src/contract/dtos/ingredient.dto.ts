@@ -1,5 +1,5 @@
-import { IsString, IsNumber, ValidateNested } from 'class-validator';
-import { IContract } from '../contract.interface';
+import { IsNumber, IsString, ValidateNested } from 'class-validator';
+import { IContract } from 'src/interfaces/contract.interface';
 
 export class CreateContractDto implements IContract {
 

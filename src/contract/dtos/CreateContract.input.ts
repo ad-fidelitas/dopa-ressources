@@ -1,5 +1,5 @@
-import { InputType, Field } from 'type-graphql';
-import { IContract } from '../contract.interface';
+import { IContract } from 'src/interfaces/contract.interface';
+import { Field, InputType } from 'type-graphql';
 
 @InputType()
 export class CreateContractInput implements IContract {

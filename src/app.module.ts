@@ -1,16 +1,21 @@
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ContractModule } from './contract/contract.module';
-import { DatabaseModule } from './database/database.module';
+import { MongooseServicesModule } from './mongoose-services/mongoose-services.module';
 
+// @AngularScoping -> have a decorator that solves the nestjs submoduling problem
+// Extracts the parameter from the @Modules
+// Looks into all imports and recursively applies the angular scoping
+// Mechanism
+// Essentially, this will take care of scoping down all submodules
 @Module({
   imports: [
-    DatabaseModule,
+    MongooseServicesModule,
     GraphQLModule.forRoot({
     debug: false,
     autoSchemaFile: 'graph-ql/schema.gql',
   }),
-    ContractModule,
+  ContractModule,
 ],
   controllers: [],
   providers: [],

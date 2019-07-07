@@ -1,5 +1,5 @@
+import { IContract } from 'src/interfaces/contract.interface';
 import { Field, ObjectType } from 'type-graphql';
-import { IContract } from '../contract.interface';
 
 @ObjectType()
 export class Contract implements IContract {
