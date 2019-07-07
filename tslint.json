@@ -7,14 +7,21 @@
   "rules": {
     "quotemark": [true, "single"],
     "member-access": [false],
-    "ordered-imports": [false],
     "max-line-length": [true, 150],
     "member-ordering": [false],
     "interface-name": [false],
     "arrow-parens": false,
     "object-literal-sort-keys": false,
     "callable-types": true,
-    "variable-name":false
+    "variable-name":false,
+    "interface-over-type-literal": false,
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "lowercase-last",
+        "named-imports-order": "lowercase-first"
+      }
+    ]
   },
   "rulesDirectory": []
 }
