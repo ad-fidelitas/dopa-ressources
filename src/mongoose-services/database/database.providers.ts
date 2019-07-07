@@ -1,9 +1,9 @@
 import { Provider } from '@nestjs/common';
 import * as mongoose from 'mongoose';
-import { DatabaseSymbols } from '../DatabaseSymbols';
+import { databaseTokens } from '../databaseTokens';
 
 export const mongooseConnectionProvider: Provider = {
-        provide: DatabaseSymbols.Connection,
+        provide: databaseTokens.connection,
         useFactory: async (): Promise<typeof mongoose> =>
             await mongoose.connect('mongodb://localhost/dopa'),
 };

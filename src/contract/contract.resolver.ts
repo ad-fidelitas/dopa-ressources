@@ -1,14 +1,14 @@
 import { Inject } from '@nestjs/common';
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { ServiceKeys } from 'src/constants/ServiceKeys';
 import { IContractService } from 'src/interfaces/IContractService';
+import { serviceTokens } from 'src/tokens/services';
 import { CreateContractInput } from './dtos/CreateContract.input';
 import { Contract } from './graphq-ql/contract.object';
 
 @Resolver('Contract')
 export class ContractResolver {
     constructor(
-        @Inject(ServiceKeys.ContractService) private readonly contractService: IContractService,
+        @Inject(serviceTokens.contract) private readonly contractService: IContractService,
     ) {}
 
     @Query(returns => Contract, { name: 'contract'})

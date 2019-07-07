@@ -1,7 +1,7 @@
 import { Provider } from '@nestjs/common';
 import { Connection } from 'mongoose';
 import { Typegoose } from 'typegoose';
-import { DatabaseSymbols } from '../DatabaseSymbols';
+import { databaseTokens } from '../databaseTokens';
 import { Contract } from './contract.resource';
 
 const buildModelProvider =
@@ -12,10 +12,10 @@ const buildModelProvider =
             .getModelForClass<RessourceModel>(new ModelConstructor(), {
             existingConnection: connection,
         }),
-        inject: [DatabaseSymbols.Connection],
+        inject: [databaseTokens.connection],
     };
 };
 
 export const modelProviders: Provider[] = [
-    buildModelProvider(DatabaseSymbols.ContractModel, Contract),
+    buildModelProvider(databaseTokens.contractModel, Contract),
 ];

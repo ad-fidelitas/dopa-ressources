@@ -1,6 +1,6 @@
 import { Provider } from '@nestjs/common';
 import { Model } from 'mongoose';
-import { ServiceKeys } from '../../constants/ServiceKeys';
+import { serviceTokens } from 'src/tokens/services';
 import { ContractService } from './contract.service';
 
 const buildServiceProvider =
@@ -10,5 +10,5 @@ const buildServiceProvider =
 });
 
 export const serviceProviders: Provider[] = [
-    buildServiceProvider<ContractService>(ServiceKeys.ContractService, ContractService),
+    buildServiceProvider<ContractService>(serviceTokens.contract, ContractService),
 ];
