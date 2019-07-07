@@ -1,7 +1,7 @@
 import { Document, Model } from 'mongoose';
+import { ITodoList } from 'src/interfaces/todo-list.interface';
 import { pre, prop, Typegoose } from 'typegoose';
-import { IdGen } from '../../database/IdGen';
-import { ITodoList } from '../todo-list.interface';
+import { IdGen } from '../database/IdGen';
 
 @pre<TodoList>('save', function(next) {
     if (this._id === undefined) {

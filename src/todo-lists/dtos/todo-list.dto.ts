@@ -1,5 +1,5 @@
 import { IsArray, IsNumber, IsString, ValidateNested } from 'class-validator';
-import { ITodoList } from '../todo-list.interface';
+import { ITodoList } from 'src/interfaces/todo-list.interface';
 
 export class CreateContractDto implements ITodoList {
 

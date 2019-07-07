@@ -1,5 +1,5 @@
+import { ITodoList } from 'src/interfaces/todo-list.interface';
 import { Field, ObjectType } from 'type-graphql';
-import { ITodoList } from '../todo-list.interface';
 
 @ObjectType()
 export class TodoList implements ITodoList {

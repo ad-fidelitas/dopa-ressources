@@ -3,6 +3,7 @@ import { Connection } from 'mongoose';
 import { Typegoose } from 'typegoose';
 import { databaseTokens } from '../databaseTokens';
 import { Contract } from './contract.resource';
+import { TodoList } from './todo-list.resource';
 
 const buildModelProvider =
 <RessourceModel extends Typegoose>(key: symbol, ModelConstructor: new() => RessourceModel): Provider => {
@@ -18,4 +19,5 @@ const buildModelProvider =
 
 export const modelProviders: Provider[] = [
     buildModelProvider(databaseTokens.contractModel, Contract),
+    buildModelProvider(databaseTokens.todoListModel, TodoList),
 ];
