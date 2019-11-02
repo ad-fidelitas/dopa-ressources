@@ -28,7 +28,7 @@
     "apollo-server-express": "^2.6.2",
     "graphql": "^14.3.1",
     "graphql-tools": "^4.0.4",
-    "mongoose": "^5.5.14",
+    "mongoose": "^5.7.5",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.3.3"
